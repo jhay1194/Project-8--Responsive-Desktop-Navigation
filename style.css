@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,400&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9EDF1;
+}
+.container {
+    width: 100%;
+    /* margin-bottom: 6.8em; */
+}
+
+.container .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #DBE1E8;
+    width: 100%;
+    padding: 3.3em 0;
+    margin-bottom: 9.8em;
+}
+.container .header nav{
+    display: none;
+    gap: 3.5em;
+    cursor: pointer;
+}
+.container .header nav .nav-items-active{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.container .header > nav .nav-items{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.container .header > nav .nav-items:hover{
+    color: #0460BC;
+}
+.container .header button{
+    background-color: #C3CCD7;
+    font-size: 1.8rem;
+    border-style: none;
+    border-radius: 0.22em;
+    /* width: 4.61em;
+    height: 1.83em; */
+    padding:0.22em 0.64em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 5.5em;
+}
+
+.container .header .openbtn {
+    background-color: transparent;
+    margin-left: 2.4em;
+}
+.container .header .openbtn>svg{
+    margin-left: -2.58em;
+}
+
+.container .header .logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0460BC;
+    margin-left: 1.55em;
+
+}
+.container .holder {
+    margin-left: 12em;
+}
+
+.container .holder-long {
+    display: block;    
+    background-color: #DBE1E8;
+    width: 75%;
+    height: 3.5em;
+    border-radius: 4.5em;
+    margin-bottom: 2.4em;
+}
+.container .holder-short {    
+    display: block;    
+    background-color: #DBE1E8;
+    width: 50%;
+    height: 3.5em;
+    border-radius: 4.5em;
+    margin-bottom: 11.8em;
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6em;
+}
+
+.sidebar a {
+    padding: 0.32em 0.32em 0.32em 0.78em;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-align: right;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+    padding-right: 1.39em;
+  }
+  .sidebar a:nth-child(2){
+    font-weight: 700;
+  }
+  
+  .sidebar a:hover {
+    color: #0460BC;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0.1em;
+    font-size: 3.6rem;
+  }
+  
+  .openbtn {
+    font-size: 2.0em;
+    cursor: pointer;
+    background-color: #ffffff;
+    /* color: white; */
+    padding: 1em 1.5em;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  .container {
+    transition: margin-left .5s;
+    /* padding: 1.6em; */
+  }
+  
+  /* On smaller screens, where height is less than 45.0em, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 300px) {
+    .sidebar {padding-top: 1.5em;}
+    .sidebar a {font-size: 1.8em;}
+  }
+
+@media only screen and (min-width:650px){
+    .container .header nav{
+        display: flex;
+        font-size: 1.8rem;
+        font-weight: 400;
+        /* margin-left: 12.5em; */
+    }
+    .container .header {
+        margin-bottom: 9.8em;
+    }
+    .container .header nav > a {
+        color: #000000;
+        text-decoration: none;
+    }
+    .container .header nav > a:hover{
+        color: #0460BC;
+    }
+    .container .header nav > a:first-child{
+        font-weight: 700;
+    }
+    
+    .openbtn{
+        visibility: hidden;
+    }
+    .container .holder-long {
+        display: flex;
+    }
+    .container .holder-short {    
+        display: flex;
+    }
+}
